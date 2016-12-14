@@ -152,7 +152,7 @@ shinyServer(function(input, output, clientData, session) {
 	if (is.null(sim)) return(NULL)
     # p1 <- plotSim(sim, type=input$plots, lf.type=lf.type, perRec=perRec, 
 	        # incSPR=TRUE, size.pt=input$size.pt)
-    p1 <- plotSim(sim, type=input$plots, lf.type=lf.type, perRec=perRec, 
+    p1 <- plotSim(sim, lf.type=lf.type, perRec=perRec, 
 	        incSPR=TRUE)			
 	p1
   })
@@ -173,7 +173,7 @@ shinyServer(function(input, output, clientData, session) {
 	if (input$perRec == "FALSE") perRec <- FALSE
       # ggsave(file, plot = plotSim(runSim(), type=input$plots, lf.type=lf.type, 	  
 	    # perRec=perRec, incSPR=TRUE, size.pt=input$size.pt), device = "png")
-      ggsave(file, plot = plotSim(runSim(), type=input$plots, lf.type=lf.type, 	  
+      ggsave(file, plot = plotSim(runSim(), lf.type=lf.type, 	  
 	    perRec=perRec, incSPR=TRUE), device = "png")		
     }
   )  
