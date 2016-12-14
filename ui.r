@@ -50,10 +50,10 @@ shinyUI(tagList(tags$head(includeScript("google-analytics.js")),
 		        choices=c("All"="all", "Length Frequency"="len.freq", 
 				"Maturity/Selectivty"="maturity.select",
 				 "Growth"="growth", "Yield Curve"="yield.curve"))
-			)),
-			fluidRow(
-			  column(4, sliderInput("size.pt", label="Point Size", value=5, min=0, max=10, step=1))
-			)
+			))#,
+			# fluidRow(
+			  # column(4, sliderInput("size.pt", label="Point Size", value=5, min=0, max=10, step=1))
+			# )
           ), tags$hr()			
 		)
 	)
