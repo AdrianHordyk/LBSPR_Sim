@@ -101,7 +101,7 @@ shinyServer(function(input, output, clientData, session) {
 	),
 	column(7,
 	  conditionalPanel(condition="input.FMorSPR == 'FALSE'",
-	   sliderInput("FM", "FM", min=0, max=3, step=0.1, value=1))
+	   sliderInput("FM", "F/M", min=0, max=3, step=0.1, value=1))
 	)),
 
 	h4("Selectivity-at-Length"),
